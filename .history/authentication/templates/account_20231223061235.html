@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<br />
+<br />
+<i class="fa-solid fa-lock"></i>
+<br>
+<div class="container bg-white shadow-md p-5 form-logout">
+    <div class="text-center">
+        <h4 class="text-uppercase">Account Locked</h4>
+        <p>Sorry you have been locked out due to multiple attempts</p>
+        <p>You may re-login into your account after expiry period</p>
+        <br>
+        <a class="btn btn-info" type="button" href="{% url 'home' %}">
+            <i class="fa fa-user" aria-hidden="true"></i> &nbsp; Return to home
+        </a>
+    </div>
+</div>
+{% endblock content %}
